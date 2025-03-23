@@ -1,5 +1,8 @@
 package patterns.estrutural.bridge;
-
+/*
+BRIDGE
+Intencao: Desacoplar uma abstração de sua implementação para que ambas possam variar independentemente..
+ */
 public class MinhaApp {
 
 	public static void main(String[] args) {

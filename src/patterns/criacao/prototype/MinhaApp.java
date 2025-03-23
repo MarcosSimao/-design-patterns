@@ -1,5 +1,8 @@
 package patterns.criacao.prototype;
-
+/*
+PROTOTYPE
+Intencao: Criar novos objetos através da clonagem de um protótipo existente, ao invés de instanciar diretamente uma nova instância.
+ */
 public class MinhaApp {
 
 	public static void main(String[] args) {

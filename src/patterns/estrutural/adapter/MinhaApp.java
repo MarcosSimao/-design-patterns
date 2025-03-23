@@ -1,5 +1,9 @@
 package patterns.estrutural.adapter;
-
+/*
+ADAPTER
+Intencao: Converter a interface de uma classe em outra que o cliente espera.
+Converter a interface de uma classe para outra interface esperada pelo cliente
+ */
 public class MinhaApp {
 
 	public static void main(String[] args) {
