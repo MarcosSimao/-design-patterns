@@ -6,13 +6,16 @@ Intencao: Fornecer um substituto ou intermediário para controlar o acesso a um 
 public class MinhaApp {
 
 	public static void main(String[] args) {
-		Image image1 = new ProxyImage("HiRes_10MB_Photo1");
-        Image image2 = new ProxyImage("HiRes_10MB_Photo2");
-        
-        image1.displayImage();
-        image2.displayImage();
-        
-        image1.displayImage();
-	}
+        // Criamos o objeto real (Infobip)
+        EnvioSMS infobip = new InfobipSMS();
+
+        // Criamos o Proxy para controlar os envios
+        EnvioSMS proxySMS = new ProxyEnvioSMS(infobip);
+
+        // Enviamos mensagens
+        proxySMS.enviarMensagem("+5511999999999", "Oferta exclusiva!");
+        proxySMS.enviarMensagem("+5511999999999", "Oferta exclusiva!"); // Essa será bloqueada pelo Proxy
+        proxySMS.enviarMensagem("+5511988888888", "Seu código de verificação é 123456.");
+    }
 
 }
